@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luxury Fragrance Collection</title>
+<title>SWRESELLS</title>
 
 <style>
 body {
@@ -13,11 +13,15 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* ================= Banner ================= */
+
 .banner {
-    height: 65vh;
+    height: 70vh;
     background: url("SPIDER_THEME.png") center/contain no-repeat;
     background-color: #000;
 }
+
+/* ================= Section Styling ================= */
 
 .section {
     padding: 80px 20px;
@@ -27,52 +31,89 @@ body {
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: #fff;
 }
 
+/* ================= Product Grid ================= */
+
 .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 60px;
+    max-width: 1300px;
+    margin: auto;
 }
+
+/* ================= Product Card ================= */
 
 .product-card {
     background-color: #000;
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 16px;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
 }
 
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+.product-card:nth-child(5) { animation-delay: 0.5s; }
+.product-card:nth-child(6) { animation-delay: 0.6s; }
+.product-card:nth-child(7) { animation-delay: 0.7s; }
+.product-card:nth-child(8) { animation-delay: 0.8s; }
+
 .product-card img {
-    width: 260px;
+    width: 240px;
     background-color: #000;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 0 60px #ffffff;
-    transition: 0.3s ease;
+    box-shadow: 0 0 70px rgba(255,255,255,0.9);
+    transition: 0.4s ease;
 }
 
 .product-card img:hover {
-    box-shadow: 0 0 90px #ffffff;
-    transform: scale(1.05);
+    box-shadow: 0 0 110px rgba(255,255,255,1);
+    transform: scale(1.07);
 }
 
 .product-card h3 {
     margin-top: 25px;
-    font-size: 1.3rem;
-    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* ================= Animation ================= */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= Mobile Adjustments ================= */
+
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .product-card img {
+        width: 200px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- Banner -->
 <div class="banner"></div>
 
+<!-- Fragrances -->
 <section class="section">
-    <h2>Featured Fragrances</h2>
-
+    <h2>Fragrances</h2>
     <div class="products">
 
         <div class="product-card">
@@ -91,8 +132,70 @@ body {
         </div>
 
         <div class="product-card">
-            <img src="DIOR.png" alt="Dior Sauvage Eau De Parfum">
+            <img src="DIOR.png" alt="Dior Sauvage EDP">
             <h3>Dior Sauvage Eau De Parfum</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- Hoodies -->
+<section class="section">
+    <h2>Hoodies</h2>
+    <div class="products">
+
+        <div class="product-card">
+            <img src="HOODIE1.png" alt="Premium Hoodie">
+            <h3>Premium Hoodie</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="HOODIE2.png" alt="Streetwear Hoodie">
+            <h3>Streetwear Hoodie</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- AirPods -->
+<section class="section">
+    <h2>AirPods</h2>
+    <div class="products">
+
+        <div class="product-card">
+            <img src="AIRPODS.png" alt="AirPods Pro">
+            <h3>AirPods Pro</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- Lulu -->
+<section class="section">
+    <h2>Lulu</h2>
+    <div class="products">
+
+        <div class="product-card">
+            <img src="LULU1.png" alt="Lulu Set">
+            <h3>Lulu Set</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- Luxury Accessories -->
+<section class="section">
+    <h2>Luxury Accessories</h2>
+    <div class="products">
+
+        <div class="product-card">
+            <img src="ACCESSORY1.png" alt="Luxury Wallet">
+            <h3>Luxury Wallet</h3>
+        </div>
+
+        <div class="product-card">
+            <img src="ACCESSORY2.png" alt="Designer Sunglasses">
+            <h3>Designer Sunglasses</h3>
         </div>
 
     </div>
